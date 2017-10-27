@@ -1,2 +1,21 @@
-<rm-nav-menu></rm-nav-menu>
-<div class='content' [ngClass]={}
+<div class="menu-container " [ngClass]="{'menu-closed':!isNavMenuOpen, 'change': isNavMenuOpen}">
+    <div class="menu-icon" (click)="onMenuClick()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <div class="menu centered">
+      <!--<div class = "logo-container">-->
+        <img class="logo-container" src="../../../../assets/logo_rmp_white.svg">
+        <!--</div>-->
+        
+        <div [ngClass]="{'menu-closed':!isNavMenuOpen, 'change': isNavMenuOpen}">
+          <rm-nav-item [label]='"Portfolio "' [navLink]='"portfolio"'></rm-nav-item>
+          <rm-nav-item [label]='"Contact "' [navLink]='"contact"'></rm-nav-item>
+          <rm-nav-item [label]='"About"' [navLink]='"about"'></rm-nav-item>          
+        </div>
+        
+      </div>
+<div class="content" [ngClass]="{'menu-closed':!isNavMenuOpen, 'change': isNavMenuOpen}">
+    <router-outlet></router-outlet>
+  </div>

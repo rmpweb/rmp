@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'rm-public-layout',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicLayoutComponent implements OnInit {
 
-  constructor() { }
+  isNavMenuOpen:boolean = false;
+  constructor(
+    private router: Router
+  ) {
+  }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.router.events.subscribe(event => this.isNavMenuOpen = false);
+  }
+
+  onMenuClick() {
+    console.log('clicked');
+    this.isNavMenuOpen = !this.isNavMenuOpen;
   }
 
 }

@@ -16,7 +16,12 @@
 
 
 rm-public-layout{
+    display:flex;
+    justify-content: flex-start;
+    background-color: #1b1b1b;
+    color: whitesmoke;
     height: calc(100vh - 51px);
+    width: 100vw;
 }
 
 footer{
