@@ -1,3 +1,4 @@
+@import '../main.scss';
 .centered{
     display: flex;
     align-items: center;
@@ -20,7 +21,7 @@ rm-public-layout{
     justify-content: flex-start;
     background-color: #1b1b1b;
     color: whitesmoke;
-    height: calc(100vh - 51px);
+    height: $vh-less-footer;
     width: 100vw;
 }
 
@@ -33,6 +34,7 @@ footer{
     padding: 10px;
     color:white;
     font-size: 11px;
+    font-family: 'Assistant', sans-serif;
     position: absolute;
     right: 0;
     bottom: 0;
