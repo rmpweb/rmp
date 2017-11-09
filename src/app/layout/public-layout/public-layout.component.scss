@@ -8,11 +8,11 @@
   }
 
 
-  .menu-icon {
+  rm-nav-toggle {
     display: none;
 }
 
-ul {
+.nav-container {
     padding: 0;
     list-style-type: none;
 }
@@ -26,8 +26,8 @@ ul {
 }
 
 .menu{
-  background-color: #181818;
-  position: absolute;
+  // background-color: #181818;
+  // position: absolute;
   width: 350px;
   height: $vh-less-footer;
   display: flex;
@@ -89,58 +89,30 @@ li a {
   }
 
 
-  .menu-icon {
+  rm-nav-toggle {
     display: inline-block;
-    cursor: pointer;
-    margin: 18px 0 0 10px;
-    width: 35px;
-    height: 39px;
+    height: 24px;
+    margin: 33px 0px 0px 20px;
     z-index: 999;
   }
 
-
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-  }
-
-  .change .bar2 {opacity: 0;}
-
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-  }
-
-
-
   .logo-container {
     width: 210px;
-    padding: 0px;
+    padding: 15px 0px 20px 0px;
     height: auto;
     display: block;
   }
-
-
-
 
   .menu-container{
     width: 100vw;
     height: 80px;
     position: fixed;
-    z-index: 1;
+    // z-index: 1;
     background-color: #1b1b1b;
     opacity: 0.9;
   }
   .menu{
-    /*position: absolute;*/
+    position: absolute;
     width: 100vw;
     height: auto;
     display: flex;
@@ -153,7 +125,7 @@ li a {
     margin-top: 80px;
     width: 100vw;
     height: 100%;
-    position: relative;
+    // position: relative;
     overflow-y: scroll;
     transition: all .1s ease-in-out;
   }
@@ -162,33 +134,16 @@ li a {
     margin-top: 225px;
     transition: all .1s ease-in-out;
   }
-  ul.menu-closed {
+  .nav-container.menu-closed {
     display: none !important;
   }
-  ul.change {
+  .nav-container.change {
     display: flex;
     justify-content: center;
     list-style-type: none;
     flex-direction: column;
     width: 100%;
   }
-
-
-
-  .scale-down{
-    transform: scale(0.35);
-  }
-}
-
-
-li a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-li.active a{
-  color: #ffffff;
-  /*text-decoration: none !important;*/
 }
 
 
@@ -199,13 +154,5 @@ li.active a{
 
 
 
-  rm-nav-menu{
-    background-color: #181818;
-    position: absolute;
-    width: 350px;
-    height: calc(100vh - #{$footer-height});
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
-    text-align: center;
-  }
+
+

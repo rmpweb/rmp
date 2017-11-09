@@ -18,7 +18,8 @@ export class PublicLayoutComponent implements OnInit {
     this.router.events.subscribe(event => this.isNavMenuOpen = false);
   }
 
-  onMenuClick() {
+  onMenuClick(event) {
+    // debugger;
     console.log('clicked');
     this.isNavMenuOpen = !this.isNavMenuOpen;
   }

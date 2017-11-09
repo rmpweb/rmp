@@ -20,23 +20,14 @@ rm-public-layout{
     display:flex;
     justify-content: flex-start;
     background-color: #1b1b1b;
-    color: whitesmoke;
+    // color: whitesmoke;
     height: $vh-less-footer;
     width: 100vw;
 }
 
-footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-between;
-    height: 15px;
-    padding: 10px;
-    color:white;
-    font-size: 11px;
-    font-family: 'Assistant', sans-serif;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
+// @media all and (max-width: 700px) {
+//     rm-public-layout{
+//       flex-direction: column;
+//     }
+// }
+
