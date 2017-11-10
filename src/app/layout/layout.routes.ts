@@ -1,6 +1,11 @@
 import {Routes} from '@angular/router';
-import { PortfolioComponent } from '../portfolio/portfolio/portfolio.component';
+import { GalleryComponent } from '../gallery/components/gallery/gallery.component';
+import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 
 export const LayoutRoutes: Routes = [
-    { path: 'portfolio', component: PortfolioComponent}
+    { path: 'overview', component: GalleryComponent},
+    { path: 'places', component: GalleryComponent},
+    { path: 'about', component: AboutComponent},
+    { path: 'contact', component: ContactComponent}
 ];

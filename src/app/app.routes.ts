@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
 
 export const AppRoutes: Routes = [
-    { path: '', redirectTo: 'portfolio', pathMatch: 'full' }
+    { path: '', redirectTo: 'overview', pathMatch: 'full' }
 ];

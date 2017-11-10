@@ -7,18 +7,25 @@ import { LayoutRoutes } from './layout.routes';
 import { PortfolioModule } from '../portfolio/portfolio.module';
 import { NavToggleComponent } from './components/nav-toggle/nav-toggle.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { GalleryModule } from '../gallery/gallery.module';
+import { ContactModule } from '../contact/contact.module';
+import { AboutModule } from '../about/about.module';
+import { NavGroupComponent } from './components/nav-group/nav-group.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
     RouterModule.forChild(LayoutRoutes),
-    PortfolioModule
+    GalleryModule,
+    ContactModule,
+    AboutModule
   ],
   declarations: [
     PublicLayoutComponent,
     NavItemComponent,
-    NavToggleComponent
+    NavToggleComponent,
+    NavGroupComponent
   ],
   exports: [
     PublicLayoutComponent

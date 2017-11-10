@@ -6,7 +6,10 @@
         <!--</div>-->
         
         <div class='nav-container'[ngClass]="{'menu-closed':!isNavMenuOpen, 'change': isNavMenuOpen}">
-          <rm-nav-item [label]='"Galleries "' [navLink]='"portfolio"'></rm-nav-item>
+          <rm-nav-group [label]='"Galleries "'>
+            <rm-nav-item [label]='"Overview "' [navLink]='"overview"'></rm-nav-item>
+            <rm-nav-item [label]='"Places "' [navLink]='"places"'></rm-nav-item>
+          </rm-nav-group>
           <rm-nav-item [label]='"About"' [navLink]='"about"'></rm-nav-item>          
           <rm-nav-item [label]='"Contact "' [navLink]='"contact"'></rm-nav-item>
         </div>
