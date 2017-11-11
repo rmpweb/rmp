@@ -1,3 +1,4 @@
+@import '../main.scss';
 .centered{
     display: flex;
     align-items: center;
@@ -12,3 +13,21 @@
     height: auto;
     display: block;
 }
+
+
+
+rm-public-layout{
+    display:flex;
+    justify-content: flex-start;
+    background-color: #1b1b1b;
+    // color: whitesmoke;
+    height: $vh-less-footer;
+    width: 100vw;
+}
+
+// @media all and (max-width: 700px) {
+//     rm-public-layout{
+//       flex-direction: column;
+//     }
+// }
+

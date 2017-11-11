@@ -1,0 +1,16 @@
+.rm-nav-item{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding: 10px 0px 10px 0px;
+    outline: none;
+    cursor: pointer;
+    &.active{
+        color: white;
+        font-weight: 400;
+    }
+    &:hover{
+        color: white;
+        font-weight: 400;
+    }
+}

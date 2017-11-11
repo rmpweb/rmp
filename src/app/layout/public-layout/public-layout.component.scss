@@ -1,0 +1,161 @@
+@import '../../../main.scss';
+.content{
+    display: inline-flex;
+    width: calc(100vw - 350px);
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+
+  rm-nav-toggle {
+    display: none;
+}
+
+.nav-container {
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu-container{
+  /*width: 100%;*/
+  /*height: 100%;*/
+  width: 350px;
+  height: $vh-less-footer;  
+  display: inline-flex;
+}
+
+.menu{
+  // background-color: #181818;
+  // position: absolute;
+  margin-top: 50px;
+  width: 350px;
+  height: $vh-less-footer;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+  text-align: center;
+}
+li {
+    padding:10px 0px 10px 0px;
+}
+li a {
+  color: #CCCCCC;
+    font-family: 'Cinzel', serif;
+    text-transform: none;
+  text-decoration: none;
+    letter-spacing: -1px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+
+}
+
+
+.logo-container {
+  width: 300px;
+  padding-left: 25px;
+  padding-bottom: 50px;
+  height: auto;
+  display: block;
+}
+
+
+.content{
+  display: inline-flex;
+  width: calc(100vw - 350px);
+  height: $vh-less-footer;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+    width: 100%;
+  }
+.scale-down{
+  transform: scale(0.4);
+}
+
+
+
+
+@media all and (max-width: 700px) {
+  .root{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+
+  rm-nav-toggle {
+    display: inline-block;
+    height: 24px;
+    margin: 33px 0px 0px 20px;
+    z-index: 999;
+  }
+
+  .logo-container {
+    width: 210px;
+    padding: 15px 0px 20px calc((100vw - 210px) / 2);
+    height: auto;
+    display: block;
+  }
+
+  .menu-container{
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    // z-index: 1;
+    background-color: #1b1b1b;
+    opacity: 0.9;
+  }
+  .menu{
+    margin-top: 0px;
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content{
+    margin-top: 130px;
+    width: 100vw;
+    height: 100%;
+    // position: relative;
+    overflow-y: scroll;
+    transition: all .1s ease-in-out;
+  }
+
+  .content.change{
+    margin-top: 300px;
+    transition: all .1s ease-in-out;
+  }
+  .nav-container.menu-closed {
+    display: none !important;
+  }
+  .nav-container.change {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+<div class='rm-nav-group'[ngClass]="{'active': active === true}"(click)='open=!open' >
+    <span>{{label}}</span>
+</div>
+<div class='rm-nav-group-content' [ngClass]="{'open': open}">
+  <ng-content></ng-content>
+</div>
