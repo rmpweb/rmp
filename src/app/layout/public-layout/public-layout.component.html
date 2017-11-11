@@ -1,8 +1,8 @@
   <div class="menu-container " [ngClass]="{'menu-closed':!isNavMenuOpen, 'change': isNavMenuOpen}">
     <rm-nav-toggle (click)="onMenuClick()"></rm-nav-toggle>
-    <div class="menu centered">
+    <div class="menu">
       <!--<div class = "logo-container">-->
-        <img class="logo-container" src="../../../../assets/logo_rmp_white.svg">
+        <img class="logo-container centered" src="../../../../assets/logo_rmp_white.svg">
         <!--</div>-->
         
         <div class='nav-container'[ngClass]="{'menu-closed':!isNavMenuOpen, 'change': isNavMenuOpen}">

@@ -21,3 +21,9 @@
 .rm-nav-group-content.open{
     display: block;
 }
+
+@media all and (max-width: 700px) {
+    .rm-nav-group-content{
+        display: block;
+    }
+}
