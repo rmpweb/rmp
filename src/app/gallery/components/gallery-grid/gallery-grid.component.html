@@ -1,0 +1,5 @@
+<div class="gallery">
+  <div  *ngFor="let photo of photos ; let i = index" class="item centered">
+      <img (click)="openModal(i)"src={{photo.url}}>
+    </div>
+</div>
