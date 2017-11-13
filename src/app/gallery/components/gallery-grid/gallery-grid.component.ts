@@ -20,7 +20,7 @@ export class GalleryGridComponent implements OnInit {
   }
 
   openModal(index: any) {
-    debugger;
+    // debugger;
     this.openModalEvent.emit(index);
   }
 

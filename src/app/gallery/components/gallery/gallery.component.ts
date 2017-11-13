@@ -10,11 +10,23 @@ import { Observable } from 'rxjs/Observable';
 export class GalleryComponent implements OnInit {
   images$: Observable<any[]>;
 
-  constructor(private store: Store<fromImages.State>) { 
-    this.images$= store.select(fromImages.getAllImages);
+  selectedIndex: number = -1;
+  showModal: boolean = false;
+
+  constructor(private store: Store<fromImages.State>) {
+    this.images$ = store.select(fromImages.getAllImages);
   }
 
   ngOnInit() {
   }
 
+
+  openModal($event) {
+    this.selectedIndex = $event;
+    this.showModal = true;
+  }
+
+  closeModal($event) {
+    this.showModal = false;
+  }
 }

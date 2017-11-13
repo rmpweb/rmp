@@ -1,1 +1,2 @@
 <rm-gallery-grid [photos]="images$ | async"(openModalEvent)="openModal($event)"></rm-gallery-grid>
+<rm-gallery-modal *ngIf="showModal" (closeModal) = "closeModal($event)" [images]="images$ | async" [currentIdx]="selectedIndex"></rm-gallery-modal>
