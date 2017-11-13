@@ -14,7 +14,7 @@ export class GalleryComponent implements OnInit {
   showModal: boolean = false;
 
   constructor(private store: Store<fromImages.State>) {
-    this.images$ = store.select(fromImages.getAllImages);
+    this.images$ = store.select(fromImages.getImagesByType);
   }
 
   ngOnInit() {

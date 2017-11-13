@@ -6,14 +6,14 @@ export interface State {
     loaded: boolean;
     loading: boolean;
     images: any[];
-    selectedanyId: string;
+    tagFilter: string;
 }
 
 export const initialState: State = {
     loaded: false,
     loading: false,
     images: [],
-    selectedanyId: null
+    tagFilter: 'places',
 }
 
 export function reducer(state = initialState, action: images.Actions): State {
@@ -54,3 +54,10 @@ export function reducer(state = initialState, action: images.Actions): State {
 }
 
 export const getAllImages = (state: State) => state.images;
+export const getImagesByType = (state: State) =>  _.filter(state.images, image => (image.tags.indexOf(state.tagFilter) !== -1));
+
+
+// _.filter(imgs, function(img){
+//     return img.tags.indexOf("places") !== -1;
+//     });
+    

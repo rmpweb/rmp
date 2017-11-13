@@ -25,3 +25,8 @@ export const getAllImages = createSelector(
     getImageEntitiesState,
     fromImages.getAllImages
 );
+
+export const getImagesByType = createSelector(
+    getImageEntitiesState,
+    fromImages.getImagesByType
+);
