@@ -13,13 +13,13 @@ export class PublicLayoutComponent implements OnInit {
 
   isNavMenuOpen:boolean = false;
   constructor(
-    // private router: Router,
-    public store: Store<fromImages.State>
+    private router: Router,
+    private store: Store<fromImages.State>
   ) {
   }
 
   ngOnInit(){
-    // this.router.events.subscribe(event => this.isNavMenuOpen = false);
+    this.router.events.subscribe(event => this.isNavMenuOpen = false);
     this.store.dispatch(new images.LoadAction());
   }
 
