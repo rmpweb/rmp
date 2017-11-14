@@ -13,7 +13,7 @@ export const initialState: State = {
     loaded: false,
     loading: false,
     images: [],
-    tagFilter: 'places',
+    tagFilter: null,
 }
 
 export function reducer(state = initialState, action: images.Actions): State {
@@ -36,14 +36,14 @@ export function reducer(state = initialState, action: images.Actions): State {
         case images.LOAD_FAIL: {
             return initialState;
         }
-        case images.SELECT: {
+        case images.SET_TAG_FILTER: {
             return Object.assign({},state,{
-                selectedanyId: action.payload
+                tagFilter: action.payload
             })
         }
-        case images.DESELECT: {
+        case images.RESET_TAG_FILTER: {
             return Object.assign({},state,{
-                selectedanyId: null
+                tagFilter: null
             })
         }
         default: {
@@ -54,7 +54,7 @@ export function reducer(state = initialState, action: images.Actions): State {
 }
 
 export const getAllImages = (state: State) => state.images;
-export const getImagesByType = (state: State) =>  _.filter(state.images, image => (image.tags.indexOf(state.tagFilter) !== -1));
+export const getImagesByType = (state: State) =>  ((state.tagFilter === 'overview') || (state.tagFilter===null))? state.images: _.filter(state.images, image => (image.tags.indexOf(state.tagFilter) !== -1));
 
 
 // _.filter(imgs, function(img){

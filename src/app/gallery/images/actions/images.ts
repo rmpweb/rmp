@@ -4,9 +4,8 @@ import { Action } from '@ngrx/store';
 export const LOAD = '[Images] Load';
 export const LOAD_SUCCESS = '[Images] Load Success';
 export const LOAD_FAIL = '[Images] Load Fail';
-export const SELECT = '[Images] Select';
-export const DESELECT = '[Images] Deselect';
-
+export const SET_TAG_FILTER = '[Images] Set Tag Filter';
+export const RESET_TAG_FILTER = '[Images] Reset Tag Filter';
 
 export class LoadAction implements Action {
   readonly type = LOAD;
@@ -24,19 +23,18 @@ export class LoadFailAction implements Action {
   constructor(public payload: any) {}
 }
 
-export class SelectAction implements Action {
-  readonly type = SELECT;
-
+export class SetTagFilterAction implements Action {
+  readonly type = SET_TAG_FILTER;
   constructor(public payload: string) {}
 }
 
-export class DeselectAction implements Action {
-  readonly type = DESELECT;
+export class ResetTagFilterAction implements Action {
+  readonly type = RESET_TAG_FILTER;
 }
 
 export type Actions =
   | LoadAction
   | LoadSuccessAction
   | LoadFailAction
-  | SelectAction
-  | DeselectAction;
+  | SetTagFilterAction
+  | ResetTagFilterAction;
