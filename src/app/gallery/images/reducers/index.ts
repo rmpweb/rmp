@@ -30,3 +30,8 @@ export const getImagesByType = createSelector(
     getImageEntitiesState,
     fromImages.getImagesByType
 );
+
+export const getHasLoaded = createSelector(
+    getImageEntitiesState,
+    fromImages.getHasLoaded
+);

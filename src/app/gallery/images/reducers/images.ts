@@ -56,8 +56,4 @@ export function reducer(state = initialState, action: images.Actions): State {
 export const getAllImages = (state: State) => state.images;
 export const getImagesByType = (state: State) =>  ((state.tagFilter === 'overview') || (state.tagFilter===null))? state.images: _.filter(state.images, image => (image.tags.indexOf(state.tagFilter) !== -1));
 
-
-// _.filter(imgs, function(img){
-//     return img.tags.indexOf("places") !== -1;
-//     });
-    
+export const getHasLoaded = (state: State) => state.loaded;

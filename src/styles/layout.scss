@@ -14,18 +14,37 @@ body{
     font-family: 'Montserrat:100,100i,200,200i,300,300i,400 400i"', sans-serif; 
     font-weight: 300;
 }
+.sp-logo-container {
+    width: 600px;
+    height: auto;
+    display: block;
+  }
 
-    footer{
+    .footer{
+        width: $default-navmenu-width;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content:space-between;
-        height: 15px;
-        padding: 10px 30px 10px 30px;
-        font-size: 11px;
-        font-weight: 100;
         position: absolute;
+        span{
+            padding: 10px 30px 10px 30px;
+            height: 15px;
+            font-size: 11px;
+            font-weight: 100;
+        }
         // right: 0;
         // bottom: 0;
-        // left: 0;
+            // left: 0;
     }
+    @media all and (max-width: 700px) {
+        .footer{
+            width: 100vw;
+            // bottom: 0;
+        }
+    }
+    // @media all and (min-width: 701px) {
+    // footer{
+    //     bottom: 0;
+    //     left: 0;
+    // }
+// }

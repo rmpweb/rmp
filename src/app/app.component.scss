@@ -21,8 +21,8 @@ rm-public-layout{
     justify-content: flex-start;
     background-color: #1b1b1b;
     // color: whitesmoke;
-    // height: $vh-less-footer;
-    min-height: 100vh;
+    height: $vh-less-footer;
+    // min-height: $vh-less-footer;
     width: 100vw;
 }
 
