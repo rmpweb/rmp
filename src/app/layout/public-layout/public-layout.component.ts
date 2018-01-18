@@ -18,7 +18,7 @@ import {
     trigger('fadeOut', [
       state('loading', style({ opacity: 1 })),
       state('void', style({ opacity: 0 })),
-      transition('loading => void', animate('2000ms ease-in-out')),
+      transition('loading => void', animate('1000ms ease-in-out')),
     ])
   ],
   templateUrl: './public-layout.component.html',

@@ -2,7 +2,7 @@
 
 ::-webkit-scrollbar-track
 {
-    background-color: #1b1b1b;
+    background-color: $default-background-color;
    
 }
 
@@ -16,14 +16,14 @@
 ::-webkit-scrollbar-thumb 
 {
 	background-color: black;
-border: 2px solid #1b1b1b;
+border: 2px solid $default-background-color;
 border-radius: 10px;
 }
 
 .rm-public-layout{
   display:flex;
   justify-content: flex-start;
-  background-color: #1b1b1b;
+  // background-color: $nav-background-color;
   // color: whitesmoke;
   height: $vh-less-footer;
   // min-height: $vh-less-footer;
@@ -61,6 +61,7 @@ border-radius: 10px;
   // background-color: #181818;
   // position: absolute;
   // padding-top: 10vh;
+  background: $nav-background-color;
   width: 350px;
   height: $vh-less-footer;
   display: flex;
@@ -146,7 +147,7 @@ li a {
     height: 80px;
     position: fixed;
     z-index: 1;
-    background-color: #1b1b1b;
+    background-color: $nav-background-color;
     opacity: 0.9;
   }
   .menu{
@@ -156,7 +157,6 @@ li a {
     height: auto;
     display: flex;
     z-index: 99;
-    background-color: #1b1b1b;
     justify-content:center;
     flex-direction: column;
     text-align: center;

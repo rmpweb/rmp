@@ -17,7 +17,7 @@ export class ImagesApiService {
     this.params.set('format','json');
     this.params.set('nojsoncallback','1');
     this.params.set('method','flickr.people.getPhotos');
-    this.params.set('extras', 'tags');
+    this.params.set('extras', 'tags,url_o');
   }
 
 

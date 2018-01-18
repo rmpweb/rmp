@@ -37,13 +37,13 @@
          class="image"
          [class.active]="img['active']"
          [@imageTransition]="img['transition']"
-         [style.background-image]="img['viewerImageLoaded'] ? 'url('+img.urlb+')' : Math.abs(currentIdx-j) <=1 ? 'url('+img.urlb+')' : ''"
+         [style.background-image]="img['viewerImageLoaded'] ? 'url('+img.url_o+')' : Math.abs(currentIdx-j) <=1 ? 'url('+img.url_o+')' : ''"
          [style.left]="transform+'px'"></div>
 
     <img *ngFor='let img of images; let j = index'
          class="preloading-image"
          (load)="imageLoaded(img)"
-         src="{{ Math.abs(currentIdx-j) <=1 ? img.urlb : ''}}"/>
+         src="{{ Math.abs(currentIdx-j) <=1 ? img.url_o : ''}}"/>
   </div>
 </div>-->
 
@@ -92,12 +92,12 @@
          class="image"
          [class.active]="img['active']"
          [@imageTransition]="img['transition']"
-         [style.background-image]="img['viewerImageLoaded'] ? 'url('+img.urlb+')' : Math.abs(currentIdx-j) <=1 ? 'url('+img.urlb+')' : ''"
+         [style.background-image]="img['viewerImageLoaded'] ? 'url('+img.url_o+')' : Math.abs(currentIdx-j) <=1 ? 'url('+img.url_o+')' : ''"
          [style.left]="transform+'px'"></div>
 
     <img *ngFor='let img of images; let j = index'
          class="preloading-image"
          (load)="imageLoaded(img)"
-         src="{{ Math.abs(currentIdx-j) <=1 ? img.urlb : ''}}"/>
+         src="{{ Math.abs(currentIdx-j) <=1 ? img.url_o : ''}}"/>
   </div>
 </div>
