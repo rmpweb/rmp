@@ -1,4 +1,34 @@
 @import '../../../main.scss';
+
+::-webkit-scrollbar-track
+{
+    background-color: $default-background-color;
+   
+}
+
+::-webkit-scrollbar
+{
+    
+	width: 10px;
+	background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar-thumb 
+{
+	background-color: black;
+border: 2px solid $default-background-color;
+border-radius: 10px;
+}
+
+.rm-public-layout{
+  display:flex;
+  justify-content: flex-start;
+  // background-color: $nav-background-color;
+  // color: whitesmoke;
+  height: $vh-less-footer;
+  // min-height: $vh-less-footer;
+  width: 100vw;
+}
 .content{
     display: inline-flex;
     width: calc(100vw - 350px);
@@ -11,6 +41,8 @@
   rm-nav-toggle {
     display: none;
 }
+
+
 
 .nav-container {
     padding: 0;
@@ -28,7 +60,8 @@
 .menu{
   // background-color: #181818;
   // position: absolute;
-  margin-top: 50px;
+  // padding-top: 10vh;
+  background: $nav-background-color;
   width: 350px;
   height: $vh-less-footer;
   display: flex;
@@ -54,6 +87,7 @@ li a {
 
 .logo-container {
   width: 300px;
+  padding-top: 10vh;
   padding-left: 25px;
   padding-bottom: 50px;
   height: auto;
@@ -84,6 +118,9 @@ li a {
 
 
 @media all and (max-width: 700px) {
+  ::-webkit-scrollbar { 
+    display: none; 
+}
   .root{
     display:flex;
     justify-content: flex-start;
@@ -109,25 +146,27 @@ li a {
     width: 100vw;
     height: 80px;
     position: fixed;
-    // z-index: 1;
-    background-color: #1b1b1b;
+    z-index: 1;
+    background-color: $nav-background-color;
     opacity: 0.9;
   }
   .menu{
-    margin-top: 0px;
+    padding-top: 0px;
     position: absolute;
     width: 100vw;
     height: auto;
     display: flex;
+    z-index: 99;
     justify-content:center;
     flex-direction: column;
     text-align: center;
   }
 
   .content{
-    margin-top: 130px;
+    margin-top: 85px;
     width: 100vw;
-    height: 100%;
+    // height: 100%;
+    height: calc(100vh - 120px);
     // position: relative;
     overflow-y: scroll;
     transition: all .1s ease-in-out;

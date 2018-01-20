@@ -1,5 +1,5 @@
-.rm-nav-group{
-    font-size: 20px;
+.rm-nav-group-title{
+    font-size: 25px;
     font-weight: 300;
     letter-spacing: 0.5px;
     padding: 10px 0px 10px 0px;
@@ -20,6 +20,9 @@
 }
 .rm-nav-group-content.open{
     display: block;
+}
+.rm-nav-group{
+    margin-bottom: 15px;
 }
 
 @media all and (max-width: 700px) {

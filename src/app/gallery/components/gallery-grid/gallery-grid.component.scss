@@ -1,0 +1,134 @@
+/**
+.item {
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  float: left;
+  background-color: black;
+  margin: 2px;
+  padding: 5px;
+  position:relative;
+}
+.item img {
+  display: block;
+  width: 153%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+html{
+background: black;
+}
+
+@media screen and (max-width: 400px) {
+  .gallery .item { margin: 0; width: 100% ;}
+  .gallery { padding: 0; }
+
+}
+**/
+
+/** typical ratio 320x211 **/
+/** flexbox **/
+.gallery {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    /*max-width: 1530px;*/
+  
+  }
+  
+  
+  
+  
+  
+  /*
+  
+  
+  
+  @media screen and (max-width: 400px) {
+    .item { margin: 0; width: 100% ;}
+  }
+  */
+  
+  
+  
+  
+  
+  .item {
+    width: 300px;
+    height:300px;
+    /*
+    min-width: 300px;
+    min-height: 300px;
+    */
+    overflow: hidden;
+    display:inline-block;
+    margin: 4px;
+    cursor: pointer;
+  }
+  
+  .centered{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .item img{
+    opacity: 0.75;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  .gallery:hover img{
+    opacity: 0.5;
+  }
+  .item:hover img{
+    opacity: 1;
+    transform: scale(1.1)
+  }
+  
+  
+  @media all and (max-width: 1899px) {
+    .item {
+      width: calc((100vw - 400px)/4) ;
+      height:calc((100vw - 400px)/4);
+    }
+  }
+  
+  @media all and (max-width: 1599px) {
+    .item {
+      width: calc((100vw - 400px)/3) ;
+      height:calc((100vw - 400px)/3);
+    }
+  }
+  
+  @media all and (max-width: 1245px) {
+    .item {
+      width: calc((100vw - 400px)/2) ;
+      height:calc((100vw - 400px)/2);
+    }
+  }
+  
+  @media all and (max-width: 820px) {
+    .item {
+      width: calc(100vw - 400px);
+      height:calc(100vw - 400px);
+    }
+  }
+  
+  @media all and (max-width: 700px) {
+    .gallery {
+      z-index: 0;
+      flex-direction: column;
+    }
+      .item {
+      margin: 0px;  
+      margin-top: 3px;
+      margin-bottom: 3px;
+      width: 100vw;
+      height: auto;
+    }
+  }
+  

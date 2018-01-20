@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'rm-nav-group',
@@ -10,7 +11,7 @@ export class NavGroupComponent implements OnInit {
   @Input() label: string;
   open:boolean =false;
   active:boolean = false;
-  
+  routerSubscription: Subscription;
   constructor(
     private router: Router
   ) { }
