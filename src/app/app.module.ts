@@ -20,7 +20,7 @@ import { environment } from '../environments/environment';
   imports: [
     // BrowserModule,
     // BrowserAnimationsModule,
-    RouterModule.forRoot(AppRoutes),
+    RouterModule.forRoot(AppRoutes, {useHash: true}),
     StoreModule.forRoot(reducers, {metaReducers}),
     StoreRouterConnectingModule,
     !environment.production ? StoreDevtoolsModule.instrument() : [],
