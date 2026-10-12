@@ -1,0 +1,38 @@
+{
+  "name": "Richard Muscat",
+  "tagline": "Photography",
+  "nav": [
+    {
+      "label": "Gallery",
+      "to": "/"
+    },
+    {
+      "label": "About",
+      "to": "/about"
+    },
+    {
+      "label": "Contact",
+      "to": "/contact"
+    }
+  ],
+  "social": [],
+  "statement": "Photography is how I freeze mood and emotion into an everlasting memory. This is a small, personal selection of the moments I've kept.",
+  "statementLink": "Say hello.",
+  "about": {
+    "title": "About",
+    "paragraphs": [
+      "I was enthusiastic about photography from a very young age. It provides me with an opportunity to focus on and creatively capture a subject.",
+      "I find my inspiration in a variety of subjects including destinations, street life and social interactions. It is my passion to time freeze the mood and the emotion into an everlasting memory."
+    ],
+    "portrait": "about_portrait.png",
+    "portraitAlt": "Portrait of Richard Muscat"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Questions, thoughts, or just want to say hello? Drop me an email.",
+    "email": "info@richardmuscat.com"
+  },
+  "footer": "Richard Muscat. All rights reserved.",
+  "logo": "logo.svg",
+  "headerLayout": "center"
+}

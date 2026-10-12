@@ -1,0 +1,102 @@
+@import '@fontsource/jost/latin-300.css';
+@import '@fontsource/jost/latin-400.css';
+@import '@fontsource/jost/latin-500.css';
+@import 'tailwindcss';
+
+/*
+ * Design tokens. Change the colours here to restyle the whole site.
+ * The background is a "soft black"; try #000 for the pure-black look.
+ */
+@theme {
+  --color-ink: #121212;
+  --color-ink-deep: #0b0b0b;
+  --color-paper: #ece9e4;
+  --color-muted: #a29e96;
+  --color-line: #2b2b2a;
+
+  /* One sleek geometric sans for everything. To try another, install its @fontsource package and change these two lines. */
+  --font-display: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --font-body: 'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+}
+
+:root {
+  /* Page side margin; also used by the header so everything lines up. */
+  /* --gutter: clamp(20px, 3vw, 48px); */
+  --lb-gutter: clamp(16px, 12vw, 260px);
+  --gutter: clamp(20px, 25vw - 60px, 350px);
+  --header-h: clamp(84px, 8vw, 120px);
+}
+/* The centred header stacks logo above menu, so it needs more room. */
+/* :root[data-header='center'] {
+  --header-h: clamp(112px, 11vw, 150px);
+} */
+
+:root[data-header='center'] {
+  --header-h: clamp(106px, calc(92px + 4.6vw), 192px);
+}
+
+html {
+  background: var(--color-ink);
+  color-scheme: dark;
+  scrollbar-gutter: stable; /* stops the layout jumping when the lightbox hides the scrollbar */
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-paper);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Page transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Lightbox open/close fade (class names used by <Transition name="lb">) */
+.lb-enter-active,
+.lb-leave-active {
+  transition: opacity 0.2s ease;
+}
+.lb-enter-from,
+.lb-leave-to {
+  opacity: 0;
+}
+
+/* While the lightbox is open, make the (reserved) scrollbar gutter match its background. */
+html:has([role='dialog']) {
+  background: var(--color-ink-deep);
+}

@@ -1,12 +1,8 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { createApp } from 'vue'
+import App from './App.vue'
+import { router } from './router'
+import { loadData } from './composables/useData'
+import './style.css'
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+loadData() // start fetching photos.json / site.json immediately
+createApp(App).use(router).mount('#app')
